@@ -12,17 +12,13 @@
   </script>
 
   <!-- Site made with Mobirise Website Builder v4.6.5, https://mobirise.com -->
-  <meta name="description" content="Request an appointment, register for a group, or just send Rachel a
-  message.">
-  <title>Contact Rachel</title>
-  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.6.5, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta http-equiv="content-language" content="en">
   <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  
+  <meta name="description" content="Web Builder Description">
+  <title>Contact</title>
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -129,7 +125,7 @@
                      <img src="assets/images/Rachel Profile.jpg" alt="Profile Picture" title="">
                      <!-- SimplePractice Widget -->
                      <div class="spwidget-button-wrapper" style="padding-top:30px">
-                          <a href="https://rachel-stanton.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="b4f57e09-7f90-4beb-9ae2-d1b365beaf59" data-spwidget-scope-uri="rachel-stanton" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-scope-global data-spwidget-autobind>
+                          <a href="https://rachel-stanton.clientsecure.me" id='spwidget-link' class="spwidget-button" data-spwidget-scope-id="b4f57e09-7f90-4beb-9ae2-d1b365beaf59" data-spwidget-scope-uri="rachel-stanton" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-scope-global data-spwidget-autobind>
                            Request Appointment</a>
                      </div>
                      <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
@@ -150,7 +146,8 @@
                    </h3>
                    
                    <!-- Contact Form -->
-                   <form action="https://formspree.io/rachelstantonlicsw@gmail.com" method="POST">
+                   <script src="assets/rachel/analytics.js"></script>
+                   <form action="https://formspree.io/rachelstantonlicsw@gmail.com" method="POST" id='formspree-contact'>
                     <div data-form-alert="" hidden="">
                           Thanks for filling out the form!
                     </div>
@@ -277,6 +274,7 @@
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  
   
   
 </body>
