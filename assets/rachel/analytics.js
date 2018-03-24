@@ -42,9 +42,5 @@ spw.addEventListener('click', function(event) {
 
   // Sends the event to Google Analytics and
   // resubmits the form once the hit is done.
-  ga('send', 'event', 'SP Widget', 'click', {
-    hitCallback: createFunctionWithTimeout(function() {
-      spw.click();
-    })
-  });
+  ga('send', 'event', 'SP Widget', 'click');
 });
