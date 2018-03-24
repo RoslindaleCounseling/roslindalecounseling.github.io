@@ -44,7 +44,7 @@ spw.addEventListener('click', function(event) {
   // resubmits the form once the hit is done.
   ga('send', 'event', 'SP Widget', 'click', {
     hitCallback: createFunctionWithTimeout(function() {
-      spw.submit();
+      spw.click();
     })
   });
 });
