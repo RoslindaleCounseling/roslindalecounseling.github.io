@@ -27,6 +27,7 @@ form.addEventListener('submit', function(event) {
   // resubmits the form once the hit is done.
   ga('send', 'event', 'Contact Form', 'submit', {
     hitCallback: createFunctionWithTimeout(function() {
+      console.log('failed to connect to google');
       form.submit();
     })
   });
