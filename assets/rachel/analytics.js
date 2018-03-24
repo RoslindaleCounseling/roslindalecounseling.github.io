@@ -34,14 +34,14 @@ form.addEventListener('submit', function(event) {
 });
 
 //track when someone clicks the spwidget button
-var spw = document.getElementById('spwidget-link');
-spw.addEventListener('click', function(event) {
-
-  // Prevents the browser from submitting the form
-  // and thus unloading the current page.
-  event.preventDefault();
-
-  // Sends the event to Google Analytics and
-  // resubmits the form once the hit is done.
-  ga('send', 'event', 'SP Widget', 'click');
-});
+//var spw = document.getElementById('spwidget-link');
+//spw.addEventListener('click', function(event) {
+//
+//  // Prevents the browser from submitting the form
+//  // and thus unloading the current page.
+//  event.preventDefault();
+//
+//  // Sends the event to Google Analytics and
+//  // resubmits the form once the hit is done.
+//  ga('send', 'event', 'SP Widget', 'click');
+//});
