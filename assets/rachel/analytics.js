@@ -8,7 +8,7 @@ function createFunctionWithTimeout(callback, opt_timeout) {
       callback();
     }
   }
-  setTimeout(fn, opt_timeout || 1000);
+  setTimeout(fn, opt_timeout || 20000);
   return fn;
 }
 
