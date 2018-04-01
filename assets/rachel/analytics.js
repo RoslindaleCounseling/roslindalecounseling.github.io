@@ -31,21 +31,23 @@ form.addEventListener('submit', function(event) {
   // resubmits the form once the hit is done.
   ga('send', 'event', 'Contact Form', 'submit', {
     hitCallback: createFunctionWithTimeout(function() {
-      console.log('failed to connect to google');
       form.submit();
     })
   });
 });
 
 //track when someone clicks the spwidget button
-//var spw = document.getElementById('spwidget-link');
-//spw.addEventListener('click', function(event) {
-//
-//  // Prevents the browser from submitting the form
-//  // and thus unloading the current page.
-//  event.preventDefault();
-//
-//  // Sends the event to Google Analytics and
-//  // resubmits the form once the hit is done.
-//  ga('send', 'event', 'SP Widget', 'click');
-//});
+var spw = document.getElementById('spwidget-link');
+spw.addEventListener('click', function(event) {
+
+  // Prevents the browser from opening window
+  // and thus unloading the current page.
+  event.preventDefault();
+
+  // Sends the event to Google Analytics and
+  // opens the new window once the hit is done.
+  ga('send', 'event', 'SP Widget', 'click', {
+    hitCallback: createFunctionWithTimeout(function() {
+      spw.submit();
+    });
+});
