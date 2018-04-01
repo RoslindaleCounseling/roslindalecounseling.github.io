@@ -8,7 +8,7 @@ function createFunctionWithTimeout(callback, opt_timeout) {
       callback();
     }
   }
-  setTimeout(fn, opt_timeout || 20000);
+  setTimeout(fn, opt_timeout || 1000);
   return fn;
 }
 
@@ -17,7 +17,7 @@ function createFunctionWithTimeout(callback, opt_timeout) {
 var button = document.getElementById('formspree-button');
 
 // Adds a listener for the "submit" event.
-button.addEventListener('submit', function(event) {
+button.addEventListener('click', function(event) {
 
   // Prevents the browser from submitting the form
   // and thus unloading the current page.
@@ -28,7 +28,7 @@ button.addEventListener('submit', function(event) {
   ga('send', 'event', 'Contact Form', 'submit', {
     hitCallback: createFunctionWithTimeout(function() {
       console.log('failed to connect to google');
-      button.submit();
+      button.click();
     })
   });
 });
