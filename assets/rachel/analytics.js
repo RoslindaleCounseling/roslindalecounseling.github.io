@@ -49,5 +49,5 @@ spw.addEventListener('click', function(event) {
   ga('send', 'event', 'SP Widget', 'click', {
     hitCallback: createFunctionWithTimeout(function() {
       spw.submit();
-    });
+    })
 });
