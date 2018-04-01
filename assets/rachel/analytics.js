@@ -26,7 +26,12 @@ form.addEventListener('submit', function(event) {
   // Prevents the browser from submitting the form
   // and thus unloading the current page.
   event.preventDefault();
-
+  
+  gtag('event','conversion',{
+    'send_to':'AW-813552554/rA_HCJiX1X8Qqqf3gwM',
+    'value':150.0,
+    'currency':'USD'
+  });
   // Sends the event to Google Analytics and
   // resubmits the form once the hit is done.
   ga('send', 'event', 'Contact Form', 'submit', {
@@ -43,7 +48,7 @@ spw.addEventListener('click', function(event) {
   // Prevents the browser from opening window
   // and thus unloading the current page.
   event.preventDefault();
-
+  
   // Sends the event to Google Analytics and
   // opens the new window once the hit is done.
   ga('send', 'event', 'SP Widget', 'click', {
