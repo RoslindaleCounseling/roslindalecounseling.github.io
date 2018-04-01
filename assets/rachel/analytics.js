@@ -17,7 +17,7 @@ function createFunctionWithTimeout(callback, opt_timeout) {
 var button = document.getElementById('formspree-button');
 
 // Adds a listener for the "submit" event.
-button.addEventListener('click', function(event) {
+button.addEventListener('submit', function(event) {
 
   // Prevents the browser from submitting the form
   // and thus unloading the current page.
@@ -28,7 +28,7 @@ button.addEventListener('click', function(event) {
   ga('send', 'event', 'Contact Form', 'submit', {
     hitCallback: createFunctionWithTimeout(function() {
       console.log('failed to connect to google');
-      button.click();
+      button.submit();
     })
   });
 });
