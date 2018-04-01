@@ -50,4 +50,5 @@ spw.addEventListener('click', function(event) {
     hitCallback: createFunctionWithTimeout(function() {
       spw.submit();
     })
+  });
 });
