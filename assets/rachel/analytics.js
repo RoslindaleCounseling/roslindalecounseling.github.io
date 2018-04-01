@@ -8,9 +8,14 @@ function createFunctionWithTimeout(callback, opt_timeout) {
       callback();
     }
   }
-  setTimeout(fn, opt_timeout || 1000);
+  setTimeout(fn, opt_timeout || 10000);
   return fn;
 }
+
+//create user cookie for asynchronous data sharing so we know when people click the appointment and contact buttons
+ga('create', 'UA-115477467-1', 'auto');
+// Updates the tracker to use `navigator.sendBeacon` if available.
+ga('set', 'transport', 'beacon');
 
 // Gets a reference to the form element, assuming
 // it contains the id attribute "signup-form".
@@ -18,7 +23,6 @@ var form = document.getElementById('formspree-contact');
 
 // Adds a listener for the "submit" event.
 form.addEventListener('submit', function(event) {
-
   // Prevents the browser from submitting the form
   // and thus unloading the current page.
   event.preventDefault();
