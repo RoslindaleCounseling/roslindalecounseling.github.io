@@ -14,10 +14,10 @@ function createFunctionWithTimeout(callback, opt_timeout) {
 
 // Gets a reference to the form element, assuming
 // it contains the id attribute "signup-form".
-var button = document.getElementById('formspree-button');
+var form = document.getElementById('formspree-contact');
 
 // Adds a listener for the "submit" event.
-button.addEventListener('click', function(event) {
+form.addEventListener('submit', function(event) {
 
   // Prevents the browser from submitting the form
   // and thus unloading the current page.
@@ -28,7 +28,7 @@ button.addEventListener('click', function(event) {
   ga('send', 'event', 'Contact Form', 'submit', {
     hitCallback: createFunctionWithTimeout(function() {
       console.log('failed to connect to google');
-      button.click();
+      form.submit();
     })
   });
 });
